@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package desafio1;
+package Tabuada;
 
 import java.util.Scanner;
         
         
-public class Desafio1 {
+public class Tabuada {
 
     public static void main(String[] args) {
         Scanner ler;
@@ -22,5 +22,4 @@ public class Desafio1 {
             System.out.println("-");
         }        
     }
-    
 }
