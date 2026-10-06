@@ -1,25 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package Tabuada;
-
+import java.util.Random;
 import java.util.Scanner;
-        
-        
-public class Tabuada {
 
-    public static void main(String[] args) {
-        Scanner ler;
-        ler = new Scanner (System.in);
-        int numero, i;
-        System.out.println("Digite um número: ");
-        numero = ler.nextInt();
-        System.out.println("-----------------------------");
-        
-        for (i=1;i<11;i++) {
-            System.out.println(numero + " x " + i + " = " + numero*i);
-            System.out.println("-");
-        }        
-    }
+public class Adivinha {
+        public static void main(String[] args) {
+                Random aleatorio = new Random();
+                Scanner entrada = new Scanner(System.in);
+                int num = aleatorio.nextInt(21); // 0 até 20
+                int tentativa;
+                System.out.println(&quot;Adivinhe o número entre 0 e 20!&quot;);
+                do {
+                        System.out.print(&quot;Digite sua tentativa: &quot;);
+                        tentativa = entrada.nextInt();
+                        if (tentativa &gt; num) {
+                                System.out.println(&quot;O número é menor!&quot;);
+                        } 
+                        else if (tentativa &lt; num) {
+                                System.out.println(&quot;O número é maior!&quot;);
+                        } 
+                        else {
+                                System.out.println(&quot;Parabéns! Você acertou!&quot;);
+                        }
+                }  while (tentativa != num);
+                entrada.close();
+        }
 }
